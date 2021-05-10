@@ -16,6 +16,10 @@ app.use(cors());
 
 
 app.use("/posts", postRoutes);
+app.get('/', (req, res) => {
+    res.send("hello to Memories API!!!!");
+})
+
 const CONNECTION_URL = 'mongodb://hieu1966hn:hieu1966hn@cluster0-shard-00-00.eavto.mongodb.net:27017,cluster0-shard-00-01.eavto.mongodb.net:27017,cluster0-shard-00-02.eavto.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-mcehsk-shard-0&authSource=admin&retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5000;
 
